@@ -100,6 +100,12 @@ namespace PL
 
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdEquipo.Text))
+            {
+                MessageBox.Show("El campo 'ID_Equipo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
             Obj_Equipo_DAL.sEstado = ddlEstado.Text.Trim();
             Obj_Equipo_DAL.sTipoTorre = ddltipotorre.Text.Trim();

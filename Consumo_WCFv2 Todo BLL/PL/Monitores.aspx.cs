@@ -47,10 +47,8 @@ namespace PL
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdMonitor.Text))
-             {
-
-                MessageBox.Show("Debe completar el campo de identificación para eliminar");
-
+            {
+                MessageBox.Show("Debe completar la informacion");
                 return;
             }
 

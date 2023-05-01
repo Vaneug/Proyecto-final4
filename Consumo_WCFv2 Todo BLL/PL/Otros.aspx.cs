@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 using BLL.MANTENIMIENTOS;
 using DAL.MANTENIMIENTOS;
 
@@ -75,6 +76,28 @@ namespace PL
 
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdOtro.Text))
+            {
+                MessageBox.Show("El campo 'ID_Otro' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_TipoOtro.Text))
+            {
+                MessageBox.Show("El campo 'Tipo Otro' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            if (string.IsNullOrEmpty(txt_MarcaOtro.Text))
+            {
+                MessageBox.Show("El campo 'Marca Otro' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_ModeloOtro.Text))
+            {
+                MessageBox.Show("El campo 'Modelo modelo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
             Obj_Otro_DAL.iId_Otro = Convert.ToInt32(txt_IdOtro.Text.Trim());
             Obj_Otro_DAL.sMarca_Otro = txt_MarcaOtro.Text.Trim();
             Obj_Otro_DAL.sModelo_Otro = txt_ModeloOtro.Text.Trim();

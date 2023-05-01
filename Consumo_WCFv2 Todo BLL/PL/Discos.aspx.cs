@@ -81,17 +81,17 @@ namespace PL
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdDisco.Text))
-            { 
-                MessageBox.Show("Debe completar la información de ID_Disco");
-
-                return;
-            } 
-            if (String.IsNullOrEmpty(txt_TipoDisco.Text))
             {
-                MessageBox.Show("Debe completar la información Tipo de Disco");
-
-                return;
+                MessageBox.Show("El campo 'ID_Disco' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+
+            if (string.IsNullOrEmpty(txt_TipoDisco.Text))
+            {
+                MessageBox.Show("El campo 'Tipo Disco' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+           
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
             Obj_Disco_DAL.sTipo_Disco = txt_TipoDisco.Text.Trim();
 
