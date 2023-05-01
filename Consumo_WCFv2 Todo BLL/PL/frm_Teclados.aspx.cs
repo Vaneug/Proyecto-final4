@@ -49,7 +49,7 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdTeclado.Text) || String.IsNullOrEmpty(txt_MarcaTeclado.Text) || String.IsNullOrEmpty(txt_TipoTeclado.Text) || String.IsNullOrEmpty(txt_ModeloTeclado.Text))
             {
-                MessageBox.Show("Debe completar la informacion");
+                MessageBox.Show("Los campos ID-Teclado, Marca teclado, Tipo Teclado y Modelo teclado deben de estar completados");
 
                 return;
             }
@@ -75,7 +75,7 @@ namespace PL
 
             if (string.IsNullOrEmpty(txt_IdTeclado.Text))
             {
-                MessageBox.Show("Debe completar la informacion");
+                MessageBox.Show("Debe completar el campo de identificación para eliminar");
 
                 return;
             }
