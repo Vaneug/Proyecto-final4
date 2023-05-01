@@ -4,8 +4,14 @@
 
 #logo {
     padding-top: 0;
-    margin-top:0;
+    margin-top: 0;
     width: 10%;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 header {
@@ -127,7 +133,8 @@ nav {
     padding: 0;
     width: 200px;
     background-color: #00A885;
-    position: fixed;
+    height: auto;
+    position: relative;
 }
 
     .sidebar a {

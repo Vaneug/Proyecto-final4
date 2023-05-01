@@ -13,7 +13,7 @@
 </head>
 <a href="Index.aspx">
         <center>
-            <img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" /></center>
+            <img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" draggable="false" /></center>
     </a>
 <body>
 
