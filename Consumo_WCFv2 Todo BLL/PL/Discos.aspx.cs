@@ -24,8 +24,16 @@ namespace PL
 
         private void CargarDatosDiscos()
         {
-            Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_filtrar.Text.Trim());
-            
+            if (txt_filtrar.Text == string.Empty)
+            {
+                Obj_Disco_DAL.iId_Disco = 0;
+            }
+            else
+            {
+                Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_filtrar.Text.Trim());
+
+            }
+
             Obj_Disco_BLL.List_Filt_Discos(ref Obj_Disco_DAL);
 
             dgv_Disco.DataSource = null;
