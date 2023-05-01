@@ -171,6 +171,7 @@
     <Content Include="Recursos\Estilos\Estilo_Global.css" />
     <Content Include="Recursos\Imagenes\Case.png" />
     <Content Include="Recursos\Imagenes\Discos.png" />
+    <Content Include="Recursos\Imagenes\eliminar.png" />
     <Content Include="Recursos\Imagenes\Equipos.png" />
     <Content Include="Recursos\Imagenes\Google.png" />
     <Content Include="Recursos\Imagenes\guardar.png" />
