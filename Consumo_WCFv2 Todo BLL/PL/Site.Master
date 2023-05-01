@@ -18,11 +18,11 @@
     <link href="Recursos/Estilos/Estilos_Inicio.css" rel="stylesheet" />
     <link href="Recursos/Estilos/Estilo_Global.css" rel="stylesheet" />
 </head>
-<a href="Index.aspx">
+<body>
+    <a href="Index.aspx">
     <center>
         <img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" draggable="false" /></center>
-</a>
-<body>
+    </a>
     <form runat="server">
         <div class="sidebar">
             <a id="Enlace" href="frm_Torres.aspx">Torres</a>

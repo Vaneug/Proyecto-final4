@@ -218,8 +218,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Torres.aspx" />
-    <Content Include="Teclados.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -390,20 +388,6 @@
     </Compile>
     <Compile Include="Site_Distribucion.Master.designer.cs">
       <DependentUpon>Site_Distribucion.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Torres.aspx.cs">
-      <DependentUpon>Torres.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Torres.aspx.designer.cs">
-      <DependentUpon>Torres.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Teclados.aspx.cs">
-      <DependentUpon>Teclados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Teclados.aspx.designer.cs">
-      <DependentUpon>Teclados.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
