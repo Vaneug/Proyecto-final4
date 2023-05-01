@@ -61,6 +61,16 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdMemoria.Text))
+            {
+                MessageBox.Show("El campo 'ID_Memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            if (string.IsNullOrEmpty(txt_TipoMemoria.Text))
+            {
+                MessageBox.Show("El campo 'Tipo de memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
             Obj_Memoria_DAL.sTipo_Memoria = txt_TipoMemoria.Text.Trim();
 
