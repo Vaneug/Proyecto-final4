@@ -45,9 +45,16 @@ namespace PL
             CargarDatosTeclados();
         }
 
-        protected void btn_Guardar_Click(object sender, EventArgs e)
+        protected void btn_Modificar_Click(object sender, EventArgs e)
         {
-            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txtaFiltProd.Text.Trim());
+            if (string.IsNullOrEmpty(txt_IdTeclado.Text) || String.IsNullOrEmpty(txt_MarcaTeclado.Text) || String.IsNullOrEmpty(txt_TipoTeclado.Text) || String.IsNullOrEmpty(txt_ModeloTeclado.Text))
+            {
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+            }
+
+            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
             Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
             Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
             Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();

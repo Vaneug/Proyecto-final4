@@ -114,13 +114,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.TextBox txt_ModeloTeclado;
 
         /// <summary>
-        /// btn_Guardar control.
+        /// btn_Modificar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btn_Guardar;
+        protected global::System.Web.UI.WebControls.ImageButton btn_Modificar;
 
         /// <summary>
         /// btn_Eliminar control.

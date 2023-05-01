@@ -21,7 +21,7 @@
            <input class="Botones" id="btn_editar" type="button" value="Editar" onclick="toggle()" />
         
     </div>
-    <div id="div_Editar" style="display: block">
+    <div id="div_Editar" style="display: none">
         <p class="lead">Edición de Datos de Teclados.</p>
 
 
@@ -61,7 +61,7 @@
         <br />
         <br />
         <div style="text-align: right; margin-right: 220px;">
-            <asp:ImageButton ID="btn_Guardar" src="Recursos/Imagenes/modificar.png" Height="30px" Width="30px" runat="server" Text="Actualizar" OnClick="btn_Guardar_Click" />
+                         <asp:ImageButton ID="btn_Modificar" src="Recursos/Imagenes/modificar.png" Height="30px" Width="30px" runat="server" Text="Actualizar" OnClick="btn_Modificar_Click" />
             &nbsp;
                         &nbsp;
                         <asp:ImageButton ID="btn_Eliminar" src="Recursos/Imagenes/eliminar.png" Height="30px" Width="30px" runat="server" Text="Eliminar" OnClick="btn_Eliminar_Click" />
