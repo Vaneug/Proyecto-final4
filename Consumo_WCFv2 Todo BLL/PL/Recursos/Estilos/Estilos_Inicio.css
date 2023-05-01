@@ -122,19 +122,21 @@ nav {
     margin-left: 10px;
 }
 
+
 .sidebar {
     margin: 0;
     padding: 0;
     width: 200px;
     background-color: #00A885;
-    height: auto;
-    position: relative;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
 
     .sidebar a {
         display: block;
         color: black;
-        padding: 16px;
+        padding: 10px;
         text-decoration: none;
     }
 
@@ -158,7 +160,7 @@ div.content {
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
+        position: fixed;
     }
 
         .sidebar a {
