@@ -10,11 +10,10 @@
     <link href="Recursos/Estilos/Estilos_Inicio.css" rel="stylesheet" />
     <title></title>
 </head>
-<center><img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" /></center>
+<center><img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" draggable="false" /></center>
       <header>
     <nav>
         <ul class="nav">
-            <!--<li><a id="Enlace" href="Empleados.aspx">Usuarios</a></li> -->
             <li><a id="Enlace" href="Distribución.aspx">Distribución</a></li>
             <li><a id="Enlace" href="frm_Torres.aspx">Inventario</a></li>
             <li><a id="Enlace" href="frm_Contactanos.aspx">Contactenos</a></li>

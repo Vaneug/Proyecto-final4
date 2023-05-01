@@ -37,26 +37,6 @@ namespace BLL.MANTENIMIENTOS
                 "NORMAL", Obj_discos_DAL.dtParametros);
         }
 
-        public void List_Filt_Discos(ref cls_discos_DAL Obj_discos_DAL)
-        {
-            WCF.BDClient Obj_WCF = new BDClient();
-
-            if (Obj_discos_DAL.iId_Disco == 0)
-            {
-                Obj_discos_DAL.dtParametros = null;
-                Obj_discos_DAL.dtDatos = Obj_WCF.ListarFiltrar("discos", ConfigurationManager.AppSettings["LISTAR_DISCO"], null);
-            }
-            else
-            {
-                Obj_discos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_discos_DAL.dtParametros);
-
-                Obj_discos_DAL.dtParametros.Rows.Add("@filtro", "1", Obj_discos_DAL.iId_Disco);
-
-                Obj_discos_DAL.dtDatos = Obj_WCF.ListarFiltrar("discos", ConfigurationManager.AppSettings["FILTRAR_DISCO"],
-                    Obj_discos_DAL.dtParametros);
-            }
-        }
-
         public void Insertar_Discos(ref cls_discos_DAL Obj_discos_DAL)
         {
             WCF.BDClient Obj_WCF = new BDClient();
@@ -66,7 +46,24 @@ namespace BLL.MANTENIMIENTOS
             Obj_discos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_DISCO"],
                 "NORMAL", Obj_discos_DAL.dtParametros);
         }
-    }
-    
-}        
+        
+        public void List_Filt_Discos(ref cls_discos_DAL Obj_Discos_DAL)
+        {
+            WCF.BDClient Obj_WCF = new WCF.BDClient();
 
+            if (Obj_Discos_DAL.iId_Disco == 0)
+            {
+                Obj_Discos_DAL.dtParametros = null;
+                Obj_Discos_DAL.dtDatos = Obj_WCF.ListarFiltrar("discos", ConfigurationManager.AppSettings["LISTAR_DISCO"].ToString(), null);
+            }
+            else
+            {
+                Obj_Discos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Discos_DAL.dtParametros);
+
+                Obj_Discos_DAL.dtParametros.Rows.Add("@filtro", "1", Obj_Discos_DAL.iId_Disco);
+
+                Obj_Discos_DAL.dtDatos = Obj_WCF.ListarFiltrar("discos", ConfigurationManager.AppSettings["LISTAR_DISCO"].ToString(), Obj_Discos_DAL.dtParametros);
+            }
+        }
+    }
+}
