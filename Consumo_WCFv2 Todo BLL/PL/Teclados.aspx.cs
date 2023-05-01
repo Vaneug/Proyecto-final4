@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 using BLL.MANTENIMIENTOS;
 using DAL.MANTENIMIENTOS;
 
@@ -73,6 +74,28 @@ namespace PL
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdTeclado.Text))
+            {
+                MessageBox.Show("El campo 'ID_Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_TipoTeclado.Text))
+            {
+                MessageBox.Show("El campo 'Tipo Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            if (string.IsNullOrEmpty(txt_MarcaTeclado.Text))
+            {
+                MessageBox.Show("El campo 'Marca Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_ModeloTeclado.Text))
+            {
+                MessageBox.Show("El campo 'Modelo Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
             Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
             Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
