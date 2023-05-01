@@ -37,6 +37,14 @@ namespace PL
         {
 
             CargarDatosEquipos();
+            CargarComboDisco();
+            CargarComboMemoria();
+            CargarComboRaton();
+            CargarCombostorre();
+            CargarComboOtro();
+            CargarCombosMonitor();
+            CargarComboteclado();
+            CargarCombosEstado();
         }
 
         protected void btn_Eliminar_Click(object sender, ImageClickEventArgs e)
@@ -80,6 +88,7 @@ namespace PL
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
         {
             CargarDatosEquipos();
+        
         }
 
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
@@ -112,7 +121,7 @@ namespace PL
         {
             if (txt_filtrar.Text == string.Empty)
             {
-                Obj_Equipo_DAL.iId_Equipo = 0;
+                Obj_Equipo_DAL.iDisco_Id = 0;
             }
             else
             {
@@ -128,16 +137,16 @@ namespace PL
         private void CargarCombosEstado()
         {
             //ddl Estado
-            Obj_Equipo_DAL.iEstado_Id = 0;
+            Obj_Estados_DAL.iId_Estado = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_Estados_BLL.List_Filt_Estado(ref Obj_Estados_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN ESTADO ---");
+            Obj_Estados_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN ESTADO ---");
 
             ddlEstado.DataSource = null;
-            ddlEstado.DataTextField = "Nombre Usuario";
-            ddlEstado.DataValueField = "Identificacion Usuario";
-            ddlEstado.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddlEstado.DataTextField = "Tipo Estado";
+            ddlEstado.DataValueField = "Identificacion Estado";
+            ddlEstado.DataSource = Obj_Estados_DAL.dtDatos;
             ddlEstado.DataBind();
 
             ddlEstado.SelectedValue = "0";
@@ -146,33 +155,33 @@ namespace PL
         private void CargarCombostorre()
         {
             //ddl Torre
-            Obj_Equipo_DAL.iTorre_Id = 0;
+            Obj_Torres_DAL.iId_Torre = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_Torres_BLL.List_Filt_Torre(ref Obj_Torres_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
+            Obj_Torres_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
 
             ddltipotorre.DataSource = null;
-            ddltipotorre.DataTextField = "Nombre Usuario";
-            ddltipotorre.DataValueField = "Identificacion Usuario";
-            ddltipotorre.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddltipotorre.DataTextField = "Marca";
+            ddltipotorre.DataValueField = "Identificacion Torre";
+            ddltipotorre.DataSource = Obj_Torres_DAL.dtDatos;
             ddltipotorre.DataBind();
 
             ddltipotorre.SelectedValue = "0";
         }
-        private void Cargarteclado()
+        private void CargarComboteclado()
         {
             //ddl teclado
-            Obj_Equipo_DAL.iTeclado_Id = 0;
+            Obj_Teclados_DAL.iId_Teclado = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_Teclados_BLL.List_Filt_Teclado(ref Obj_Teclados_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN TECLADO ---");
+            Obj_Teclados_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN TECLADO ---");
 
             ddltipoteclado.DataSource = null;
-            ddltipoteclado.DataTextField = "Nombre Usuario";
-            ddltipoteclado.DataValueField = "Identificacion Usuario";
-            ddltipoteclado.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddltipoteclado.DataTextField = "Tipo teclado";
+            ddltipoteclado.DataValueField = "Identificacion Teclado";
+            ddltipoteclado.DataSource = Obj_Teclados_DAL.dtDatos;
             ddltipoteclado.DataBind();
 
             ddltipoteclado.SelectedValue = "0";
@@ -180,16 +189,16 @@ namespace PL
         private void CargarComboRaton()
         {
             //ddl raton 
-            Obj_Equipo_DAL.iRaton_Id = 0;
+            Obj_Raton_DAL.iId_Raton = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_Raton_BLL.List_Filt_Ratones(ref Obj_Raton_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN RATON ---");
+            Obj_Raton_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN RATON ---");
 
             ddlTipoRaton.DataSource = null;
-            ddlTipoRaton.DataTextField = "Nombre Usuario";
-            ddlTipoRaton.DataValueField = "Identificacion Usuario";
-            ddlTipoRaton.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddlTipoRaton.DataTextField = "Tipo Raton";
+            ddlTipoRaton.DataValueField = "Identificacion Raton";
+            ddlTipoRaton.DataSource = Obj_Raton_DAL.dtDatos;
             ddlTipoRaton.DataBind();
 
             ddlTipoRaton.SelectedValue = "0";
@@ -197,16 +206,16 @@ namespace PL
         private void CargarComboOtro()
         {
             //ddl Otro
-            Obj_Equipo_DAL.iOtro_Id = 0;
+            Obj_Otros_DAL.iId_Otro = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_Otros_BLL.List_Filt_Otro(ref Obj_Otros_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
+            Obj_Otros_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE OTRO ---");
 
             ddlTipoOtro.DataSource = null;
-            ddlTipoOtro.DataTextField = "Nombre Usuario";
-            ddlTipoOtro.DataValueField = "Identificacion Usuario";
-            ddlTipoOtro.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddlTipoOtro.DataTextField = "Tipo Otro";
+            ddlTipoOtro.DataValueField = "Identificacion Otro";
+            ddlTipoOtro.DataSource = Obj_Otros_DAL.dtDatos;
             ddlTipoOtro.DataBind();
 
             ddlTipoOtro.SelectedValue = "0";
@@ -214,16 +223,16 @@ namespace PL
         private void CargarComboDisco()
         {
             //ddl disco
-            Obj_Equipo_DAL.iDisco_Id = 0;
+            Obj_Discos_DAL.iId_Disco = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_Discos_BLL.List_Filt_Discos(ref Obj_Discos_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
+            Obj_Discos_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN DISCO ---");
 
             ddltipodisco.DataSource = null;
-            ddltipodisco.DataTextField = "Nombre Usuario";
-            ddltipodisco.DataValueField = "Identificacion Usuario";
-            ddltipodisco.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddltipodisco.DataTextField = "Tipo Disco";
+            ddltipodisco.DataValueField = "Identificacion Disco";
+            ddltipodisco.DataSource = Obj_Discos_DAL.dtDatos;
             ddltipodisco.DataBind();
 
             ddltipodisco.SelectedValue = "0";
@@ -231,16 +240,16 @@ namespace PL
         private void CargarComboMemoria()
         {
             //ddl memoria
-            Obj_Equipo_DAL.iMemoria_Id = 0;
+            Obj_memoria_DAL.iId_Memoria = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_memoria_BLL.List_Filt_Memoria(ref Obj_memoria_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
+            Obj_memoria_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA MEMORIA ---");
 
             ddlmarcamemoria.DataSource = null;
-            ddlmarcamemoria.DataTextField = "Nombre Usuario";
-            ddlmarcamemoria.DataValueField = "Identificacion Usuario";
-            ddlmarcamemoria.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddlmarcamemoria.DataTextField = "Tipo de memoria";
+            ddlmarcamemoria.DataValueField = "Identificacion memoria";
+            ddlmarcamemoria.DataSource = Obj_memoria_DAL.dtDatos;
             ddlmarcamemoria.DataBind();
 
             ddlmarcamemoria.SelectedValue = "0";
@@ -248,16 +257,16 @@ namespace PL
         private void CargarCombosMonitor()
         {
             //ddl monitor
-            Obj_Equipo_DAL.iMonitor_Id = 0;
+            Obj_Monitor_DAL.iId_Monitor = 0;
 
-            Obj_Equipo_BLL.List_Filt_Equipo(ref Obj_Equipo_DAL);
+            Obj_Monitor_BLL.List_Filt_Monitor(ref Obj_Monitor_DAL);
 
-            Obj_Equipo_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UNA TORRE ---");
+            Obj_Monitor_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN MONITOR ---");
 
             ddlmarcamonitor.DataSource = null;
-            ddlmarcamonitor.DataTextField = "Nombre Usuario";
-            ddlmarcamonitor.DataValueField = "Identificacion Usuario";
-            ddlmarcamonitor.DataSource = Obj_Equipo_DAL.dtDatos;
+            ddlmarcamonitor.DataTextField = "Tipo";
+            ddlmarcamonitor.DataValueField = "ID";
+            ddlmarcamonitor.DataSource = Obj_Monitor_DAL.dtDatos;
             ddlmarcamonitor.DataBind();
 
             ddlmarcamonitor.SelectedValue = "0";
