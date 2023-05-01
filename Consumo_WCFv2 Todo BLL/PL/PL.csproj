@@ -140,7 +140,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Index.aspx" />
-    <Content Include="inevntory.jpg" />
+    <Content Include="Recursos\Imagenes\inevntory.jpg" />
     <Content Include="Informacion.aspx" />
     <Content Include="Memorias.aspx" />
     <Content Include="Monitores.aspx" />
