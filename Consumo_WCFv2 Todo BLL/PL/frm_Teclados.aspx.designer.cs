@@ -123,13 +123,13 @@ namespace PL
         protected global::System.Web.UI.WebControls.ImageButton btn_Guardar;
 
         /// <summary>
-        /// txt_Eliminar control.
+        /// btn_Eliminar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton txt_Eliminar;
+        protected global::System.Web.UI.WebControls.ImageButton btn_Eliminar;
 
         /// <summary>
         /// btnInsertar control.

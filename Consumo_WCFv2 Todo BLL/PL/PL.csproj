@@ -56,6 +56,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -140,7 +141,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Index.aspx" />
-    <Content Include="inevntory.jpg" />
+    <Content Include="Recursos\Imagenes\inevntory.jpg" />
     <Content Include="Informacion.aspx" />
     <Content Include="Memorias.aspx" />
     <Content Include="Monitores.aspx" />

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace PL
 {
@@ -61,8 +62,17 @@ namespace PL
             CargarDatosTeclados();
         }
 
-        protected void txt_Eliminar_Click(object sender, EventArgs e)
+        protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
+           
+
+            if (string.IsNullOrEmpty(txt_IdTeclado.Text))
+            {
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+            }
+
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
 
             Obj_Teclados_BLL.Borrar_Teclado(ref Obj_Teclados_DAL);
@@ -73,6 +83,13 @@ namespace PL
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdTeclado.Text) || String.IsNullOrEmpty(txt_MarcaTeclado.Text) || String.IsNullOrEmpty(txt_TipoTeclado.Text) || String.IsNullOrEmpty(txt_ModeloTeclado.Text))
+            {
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+            }
+
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
             Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
             Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();

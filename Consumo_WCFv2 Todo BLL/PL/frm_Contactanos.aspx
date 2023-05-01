@@ -44,4 +44,5 @@
         <label>Mensaje:</label><br />
 
         <textarea id="TextArea1"></textarea>
+    </body>
 </asp:Content>
