@@ -1,0 +1,27 @@
+﻿
+.Botones {
+    background-color: white;
+    color: black;
+    border: 2px solid #00A885;
+    border-radius: 8px;
+    height: 47px;
+    width: 71px;
+}
+    .Botones:hover {
+        background-color: #00A885;
+        color: white;
+    }
+
+#btn_editar {
+        background-color: white;
+        color: black;
+        border: 2px solid #00A885;
+        border-radius: 8px;
+        height: 47px;
+        width: 71px;
+    }
+
+    #btn_editar:hover {
+        background-color: #00A885;
+        color: white;
+    }

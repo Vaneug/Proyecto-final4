@@ -1,0 +1,17 @@
+﻿#txtaFiltProd {
+    
+}
+
+.CajasTextos {
+    border: 2px solid #00A885;
+    border-radius: 5px;
+}
+
+.TextoPrimero {
+    margin-left: 5px;
+    columns: 2;
+    width:85%;
+}
+
+#TextoSegundo {
+}

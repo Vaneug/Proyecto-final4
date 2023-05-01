@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f088a3a6-ea49-4204-8f30-c17d20229e11" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:83/WCF__BD.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCF__BD.xsd" MetadataType="Schema" ID="9d109ef7-2783-4246-b94b-cf60dec1405e" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCF__BD1.xsd" MetadataType="Schema" ID="85b8f7b0-70ee-4a0d-bd26-35bfe6c82c43" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd0" />
+    <MetadataFile FileName="BD.wsdl" MetadataType="Wsdl" ID="7a59170b-7038-4be3-816d-bcb660c9d7f0" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?wsdl" />
+    <MetadataFile FileName="WCF__BD.disco" MetadataType="Disco" ID="3bc893c3-481a-4b5b-a39e-27e556fb2096" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?disco" />
+    <MetadataFile FileName="WCF__BD2.xsd" MetadataType="Schema" ID="8b2efea5-60ef-4a11-9ee8-75608a4874bc" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

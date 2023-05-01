@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site_Distribucion.Master.cs" Inherits="PL.Site_Distribucion_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<link href="Content/bootstrap.css" rel="stylesheet" /> -->
+    <!--<link href="styles/style.css" rel="stylesheet" /> -->
+    <link href="Recursos/Estilos/Estilos_Inicio.css" rel="stylesheet" />
+    <title></title>
+</head>
+<center><img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" /></center>
+      <header>
+    <nav>
+        <ul class="nav">
+            <!--<li><a id="Enlace" href="Empleados.aspx">Usuarios</a></li> -->
+            <li><a id="Enlace" href="Distribución.aspx">Distribución</a></li>
+            <li><a id="Enlace" href="Equipos.aspx">Listar Equipos</a></li>
+      
+        </ul>
+    </nav>
+</header>
+<body>
+
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</body>
+</html>
