@@ -113,7 +113,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\WCF\WCF__BD.disco" />
     <Content Include="Contact.aspx" />
     <Content Include="Contacto.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -160,6 +159,8 @@
     </None>
     <Content Include="Properties\DataSources\System.Data.DataTable1.datasource" />
     <Content Include="Properties\DataSources\System.Data.DataTable2.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable3.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable4.datasource" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Ratones.aspx" />
     <Content Include="Recursos\Estilos\Estilos_Contacto.css" />
