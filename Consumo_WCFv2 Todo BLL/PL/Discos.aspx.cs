@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 using BLL.MANTENIMIENTOS;
 using DAL.MANTENIMIENTOS;
 
@@ -47,6 +48,13 @@ namespace PL
 
         protected void btn_Eliminar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdDisco.Text))
+            {
+
+                MessageBox.Show("Debe completar el campo de identificación para eliminar");
+
+                return;
+            }
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
 
             Obj_Disco_BLL.Borrar_Discos(ref Obj_Disco_DAL);
@@ -72,6 +80,18 @@ namespace PL
 
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdDisco.Text))
+            { 
+                MessageBox.Show("Debe completar la información de ID_Disco");
+
+                return;
+            } 
+            if (String.IsNullOrEmpty(txt_TipoDisco.Text))
+            {
+                MessageBox.Show("Debe completar la información Tipo de Disco");
+
+                return;
+            }
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
             Obj_Disco_DAL.sTipo_Disco = txt_TipoDisco.Text.Trim();
 

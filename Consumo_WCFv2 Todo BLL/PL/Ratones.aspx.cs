@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 using BLL.MANTENIMIENTOS;
 using DAL.MANTENIMIENTOS;
 
@@ -40,6 +41,13 @@ namespace PL
 
         protected void btn_Eliminar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdRaton.Text))
+            {
+
+                MessageBox.Show("Debe completar el campo de identificación para eliminar");
+
+                return;
+            }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
 
             Obj_Raton_BLL.Borrar_Raton(ref Obj_Raton_DAL);

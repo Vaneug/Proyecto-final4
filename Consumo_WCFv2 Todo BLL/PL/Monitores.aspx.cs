@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 using BLL.MANTENIMIENTOS;
 using DAL.MANTENIMIENTOS;
 
@@ -45,6 +46,13 @@ namespace PL
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdMonitor.Text))
+             {
+
+                MessageBox.Show("Debe completar el campo de identificación para eliminar");
+
+                return;
+            }
 
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
           
