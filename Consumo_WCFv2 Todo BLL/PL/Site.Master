@@ -20,14 +20,12 @@
 </head>
 <a href="Index.aspx">
     <center>
-        <img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" /></center>
+        <img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" draggable="false" /></center>
 </a>
 <body>
     <form runat="server">
         <div class="sidebar">
-            <!--<a id="Enlace" href="Productos.aspx">Torres</a>-->
             <a id="Enlace" href="frm_Torres.aspx">Torres</a>
-            <!--<a id="Enlace" href="Teclados.aspx">Teclados</a>-->
             <a id="Enlace" href="frm_Teclados.aspx">Teclados</a>
             <a id="Enlace" href="Monitores.aspx">Monitores</a>
             <a id="Enlace" href="Ratones.aspx">Ratones</a>
