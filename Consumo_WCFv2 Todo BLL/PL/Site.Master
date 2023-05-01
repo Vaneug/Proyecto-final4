@@ -25,6 +25,7 @@
     </a>
     <form runat="server">
         <div class="sidebar">
+            <a id="Enlace" href="Index.aspx">Inicio</a>
             <a id="Enlace" href="frm_Torres.aspx">Torres</a>
             <a id="Enlace" href="frm_Teclados.aspx">Teclados</a>
             <a id="Enlace" href="Monitores.aspx">Monitores</a>

@@ -97,6 +97,6 @@
 
     </div>
     <div>
-        <asp:GridView ID="dgv_Equipo" runat="server" Width="900px"></asp:GridView>
+        <asp:GridView ID="dgv_Equipo" runat="server" Width="1000px"></asp:GridView>
     </div>
 </asp:Content>
