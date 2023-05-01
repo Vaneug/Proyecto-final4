@@ -141,7 +141,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Index.aspx" />
-    <Content Include="inevntory.jpg" />
+    <Content Include="Recursos\Imagenes\inevntory.jpg" />
     <Content Include="Informacion.aspx" />
     <Content Include="Memorias.aspx" />
     <Content Include="Monitores.aspx" />
@@ -172,6 +172,7 @@
     <Content Include="Recursos\Estilos\Estilo_Global.css" />
     <Content Include="Recursos\Imagenes\Case.png" />
     <Content Include="Recursos\Imagenes\Discos.png" />
+    <Content Include="Recursos\Imagenes\eliminar.png" />
     <Content Include="Recursos\Imagenes\Equipos.png" />
     <Content Include="Recursos\Imagenes\Google.png" />
     <Content Include="Recursos\Imagenes\guardar.png" />
