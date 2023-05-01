@@ -31,7 +31,7 @@ namespace PL
             }
             else
             {
-                Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
+                Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_filtrar.Text.Trim());
             }
             
             Obj_Disco_BLL.List_Filt_Discos(ref Obj_Disco_DAL);

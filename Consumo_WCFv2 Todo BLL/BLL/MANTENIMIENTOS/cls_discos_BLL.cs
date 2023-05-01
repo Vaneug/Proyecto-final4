@@ -62,7 +62,7 @@ namespace BLL.MANTENIMIENTOS
 
                 Obj_Discos_DAL.dtParametros.Rows.Add("@filtro", "1", Obj_Discos_DAL.iId_Disco);
 
-                Obj_Discos_DAL.dtDatos = Obj_WCF.ListarFiltrar("discos", ConfigurationManager.AppSettings["LISTAR_DISCO"].ToString(), Obj_Discos_DAL.dtParametros);
+                Obj_Discos_DAL.dtDatos = Obj_WCF.ListarFiltrar("discos", ConfigurationManager.AppSettings["FILTRAR_DISCO"].ToString(), Obj_Discos_DAL.dtParametros);
             }
         }
     }

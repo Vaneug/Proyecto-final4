@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="PL.Index" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="PL.Index" %>--%>
 
 <!DOCTYPE html>
 
@@ -16,8 +16,6 @@
         <ul class="nav">
             <li><a id="Enlace" href="Distribución.aspx">Distribución</a></li>
             <li><a id="Enlace" href="frm_Torres.aspx">Inventario</a></li>
-            <li><a id="Enlace" href="frm_Contactanos.aspx">Contactenos</a></li>
-            <li><a id="Enlace" href="Contact.aspx">Nosotros</a></li>
         </ul>
     </nav>
 </header>
