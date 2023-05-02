@@ -25,7 +25,7 @@
 
     </div>
     <br />
-    <div id="div_Editar" style="display: none">
+    <div id="div_Editar" style="display: block">
         <p class="lead">Edición de Datos de Torres.</p>
         <div>
             <div class="TextoPrimero" align="center">

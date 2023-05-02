@@ -51,11 +51,17 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdEquipo.Text))
             {
-
-                MessageBox.Show("Debe completar el campo de identificación para eliminar");
-
-                return;
+                MessageBox.Show("El campo 'ID_Equipo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("No tiene equipos para poder eliminar.",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+            }
+
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
 
             Obj_Equipo_BLL.Borrar_Equipo(ref Obj_Equipo_DAL);
@@ -67,6 +73,11 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdEquipo.Text))
+            {
+                MessageBox.Show("El campo 'ID_Equipo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
             Obj_Equipo_DAL.sEstado = ddlEstado.Text.Trim();
             Obj_Equipo_DAL.sTipoTorre = ddltipotorre.Text.Trim();

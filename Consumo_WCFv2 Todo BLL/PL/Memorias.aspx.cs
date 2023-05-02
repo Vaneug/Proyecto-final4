@@ -45,10 +45,15 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdMemoria.Text))
             {
-
-                MessageBox.Show("Debe completar el campo de identificación para eliminar");
-
-                return;
+                MessageBox.Show("El campo 'ID_Memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("Memoria eliminada.",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
             }
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
 
@@ -70,6 +75,14 @@ namespace PL
             {
                 MessageBox.Show("El campo 'Tipo de memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            else
+            {
+                MessageBox.Show("Memoria modificada.",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
             }
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
             Obj_Memoria_DAL.sTipo_Memoria = txt_TipoMemoria.Text.Trim();
@@ -100,8 +113,15 @@ namespace PL
                 MessageBox.Show("El campo 'Tipo de memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("Memoria guardada.",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+            }
 
-                Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
+            Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
                 Obj_Memoria_DAL.sTipo_Memoria = txt_TipoMemoria.Text.Trim();
 
                 Obj_Memoria_BLL.Insertar_Memoria(ref Obj_Memoria_DAL);
@@ -109,6 +129,7 @@ namespace PL
                 txt_IdMemoria.Text = string.Empty;
                 txt_filtrar.Text = string.Empty;
                 txt_TipoMemoria.Text = string.Empty;
+            CargarDatosMemorias();
                
         }   
     }    

@@ -87,13 +87,19 @@ namespace PL
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-           
 
-            if (string.IsNullOrEmpty(txt_IdTeclado.Text))
+
+             if (string.IsNullOrEmpty(txt_IdTeclado.Text))
             {
-                MessageBox.Show("Debe completar el campo de identificación para eliminar");
-
-                return;
+                MessageBox.Show("El campo 'ID_Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("No tiene teclados para poder eliminar.",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
             }
 
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());

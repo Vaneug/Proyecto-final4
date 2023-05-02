@@ -17,7 +17,7 @@
              &nbsp;
              &nbsp;
              &nbsp;
-            <asp:ImageButton ID="btnFiltrar" src="Recursos/Imagenes/lupa.png" runat="server" Height="30px" Width="30px" OnClick="btnFiltrar_Click" />
+            <asp:ImageButton ID="btnFiltrar" src="Recursos/Imagenes/lupa.png" runat="server" Height="30px" Width="30px" OnClick="btnFiltrar_Click"/>
         &nbsp;
              &nbsp;
             <input class="Botones" id="btn_editar" type="button" value="Editar" onclick="toggle()" />
