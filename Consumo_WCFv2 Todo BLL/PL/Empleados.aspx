@@ -62,7 +62,16 @@
             <asp:ImageButton src="Recursos/Imagenes/lupa.png" runat="server" Height="25px" Width="25px" />
              &nbsp;
              &nbsp;
-            <asp:TextBox ID="Txtfiltrar" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Txtfiltrar" runat="server"> ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="Txtfiltrar" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
              &nbsp;
              &nbsp;
              &nbsp;

@@ -10,7 +10,16 @@
         <div>
             <asp:Label ID="lbl_Distribucion" runat="server" Text="Id Distribucion: "></asp:Label>
             &nbsp;
-            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server" Height="31px" Width="360px"></asp:TextBox>
+            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server" Height="31px" Width="360px" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="txt_filtrar" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
             &nbsp;
              &nbsp;
             <asp:ImageButton ID="btnFiltrar" src="Recursos/Imagenes/lupa.png" runat="server" Height="30px" Width="30px" OnClick="btnFiltrar_Click" />
@@ -23,7 +32,13 @@
             <asp:Label ID="lbl_IdDistribucion" runat="server" Text="Id: "></asp:Label>
             &nbsp;
                     &nbsp;
-    &nbsp;<asp:TextBox  CssClass="CajasTextos" ID="txt_IdDistribucion" runat="server" Height="31px" Width="340px"></asp:TextBox>
+    &nbsp;<asp:TextBox  CssClass="CajasTextos" ID="txt_IdDistribucion" runat="server" Height="31px" Width="340px" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_IdDistribucion" ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
             &nbsp;
                     &nbsp;
                     <asp:Label ID="lbl_IdEmpleado" runat="server" Text="Id Empleado: "></asp:Label>

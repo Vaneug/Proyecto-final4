@@ -9,7 +9,13 @@
         &nbsp;&nbsp;<img src="Recursos/Imagenes/Discos.png" style=" width: 200px;"/>&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lbl_Disco" runat="server" Text="Id Disco: "></asp:Label>
         &nbsp;
-            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server"></asp:TextBox>
+            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="txt_filtrar" ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
         &nbsp;
              &nbsp;
              &nbsp;
@@ -28,7 +34,13 @@
             <div class="TextoPrimero" align="center">
                 <div>
                     <asp:Label ID="lbl_IdDisco" runat="server" Text="Id: "></asp:Label>
-                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdDisco" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdDisco" runat="server" Height="31px" Width="375px" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_IdDisco" ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                 </div>
                 <div>
                     <asp:Label ID="lbl_TipoDisco" runat="server" Text="Tipo: "></asp:Label>

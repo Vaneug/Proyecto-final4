@@ -15,8 +15,8 @@
     <nav>
         <ul class="nav">
              <li><a id="Enlace" href="Index.aspx">Inicio</a></li> 
-            <li><a id="Enlace" href="Distribución.aspx">Distribución</a></li>
-            <li><a id="Enlace" href="frm_Torres.aspx">Inventario</a></li>
+            <li><a id="Enlace" href="Distribución.aspx"> Distribución </a></li>
+            <li><a id="Enlace" href="frm_Torres.aspx"> Inventario </a></li>
         </ul>
     </nav>
 </header>

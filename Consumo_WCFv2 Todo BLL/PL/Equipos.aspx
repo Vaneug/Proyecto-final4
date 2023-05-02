@@ -9,7 +9,16 @@
         &nbsp;&nbsp;<img src="Recursos/Imagenes/Equipos.png" style=" width: 200px;"/>&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lbl_Equipo" runat="server" Text="Id Equipo: "></asp:Label>
         &nbsp;
-            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server"></asp:TextBox>
+            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="txt_filtrar" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
         &nbsp;
              &nbsp;
              &nbsp;
@@ -29,7 +38,16 @@
                 <div>
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_IdEquipo" runat="server" Text="Id: "></asp:Label>
-                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdEquipo" runat="server" Height="31px" Width="360px"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdEquipo" runat="server" Height="31px" Width="360px" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_IdEquipo" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
                 </div>
                 <div>
                     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -75,7 +93,7 @@
                 </div>
                 <div>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="lbl_MarcaMemoria" runat="server" Text="Marca Memoria: "></asp:Label>
+                    <asp:Label ID="lbl_MarcaMemoria" runat="server" Text="Tipo de Memoria: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddlmarcamemoria" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>
             </div>

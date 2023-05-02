@@ -10,7 +10,16 @@
         &nbsp;&nbsp;<img src="Recursos/Imagenes/Teclado.png" style=" width: 200px;"/>&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblProducto" runat="server" Text="Id Teclado: "></asp:Label>
         &nbsp;
-            <asp:TextBox CssClass="CajasTextos" ID="txtaFiltProd" runat="server" Width="153px" Height="27px"></asp:TextBox>
+            <asp:TextBox CssClass="CajasTextos" ID="txtaFiltProd" runat="server" Width="153px" Height="27px" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="txtaFiltProd" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
         &nbsp;
              &nbsp;
              &nbsp;
@@ -30,7 +39,16 @@
                 &nbsp; &nbsp; &nbsp; &nbsp;
                             <asp:Label ID="lbl_IdTeclado" runat="server" Text="Id: "></asp:Label>
 
-                <asp:TextBox CssClass="CajasTextos" ID="txt_IdTeclado" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                <asp:TextBox CssClass="CajasTextos" ID="txt_IdTeclado" runat="server" Height="31px" Width="375px" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_IdTeclado" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
             </div>
             <div>
                 &nbsp; &nbsp;

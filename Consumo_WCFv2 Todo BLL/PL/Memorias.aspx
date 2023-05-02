@@ -34,9 +34,12 @@
                         onkeypress="javascript:return solonumeros(event)">
                     </asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
-                            ControlToValidate="txt_IdMemoria" ErrorMessage="Solo Numeros"
+                            ControlToValidate="txt_IdMemoria" 
+                            ErrorMessage="Solo Numeros"
                             ForeColor="Red"
-                            ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
                 </div>
                 
                 <div>

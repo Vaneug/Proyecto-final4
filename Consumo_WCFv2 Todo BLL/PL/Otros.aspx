@@ -10,7 +10,16 @@
         <br />
         <asp:Label ID="lbl_Otro" runat="server" Text="Id Otro: "></asp:Label>
         &nbsp;
-            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server"></asp:TextBox>
+            <asp:TextBox CssClass="CajasTextos" ID="txt_filtrar" runat="server" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="txt_filtrar" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
         &nbsp;
              &nbsp;
              &nbsp;
@@ -30,7 +39,16 @@
                 <div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_IdOtro" runat="server" Text="Id: "></asp:Label>
-                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdOtro" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdOtro" runat="server" Height="31px" Width="375px" ToolTip="Solo se permiten numeros" 
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_IdOtro" 
+                            ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*">
+
+                    </asp:RegularExpressionValidator>
                 </div>
                 <div>
                     &nbsp;&nbsp;&nbsp;
