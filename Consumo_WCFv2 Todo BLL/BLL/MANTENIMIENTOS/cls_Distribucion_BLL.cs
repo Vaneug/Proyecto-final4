@@ -17,9 +17,9 @@ namespace BLL.MANTENIMIENTOS
 
             Obj_Distribucion_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Distribucion_DAL.dtParametros);
 
-            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_Distribucion_DAL.iID_Dsitribucion);
-            Obj_Distribucion_DAL.dtParametros.Rows.Add("@tipo_Disco", "7", Obj_Distribucion_DAL.iID_Dsitribucion);
-            Obj_Distribucion_DAL.dtParametros.Rows.Add("@tipo_Disco", "7", Obj_Distribucion_DAL.iID_Dsitribucion);
+            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_distribucion", "1", Obj_Distribucion_DAL.iID_Dsitribucion);
+            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_Equipo", "1", Obj_Distribucion_DAL.iID_Equipo);
+            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_empleado", "1", Obj_Distribucion_DAL.iID_Empleado);
 
             Obj_Distribucion_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_DISTRIBUCION"],
                 "NORMAL", Obj_Distribucion_DAL.dtParametros);
@@ -62,32 +62,13 @@ namespace BLL.MANTENIMIENTOS
             WCF.BDClient Obj_WCF = new BDClient();
 
             Obj_Distribucion_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Distribucion_DAL.dtParametros);
-
-            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_Distribucion_DAL.iID_Dsitribucion);
-            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_Disco", "1", Obj_Distribucion_DAL.iID_Empleado);
-            Obj_Distribucion_DAL.dtParametros.Rows.Add("@tipo_Disco", "7", Obj_Distribucion_DAL.iID_Equipo);
+            
+            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_distribucion", "1", Obj_Distribucion_DAL.iID_Dsitribucion);
+            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_Equipo", "1", Obj_Distribucion_DAL.iID_Equipo);
+            Obj_Distribucion_DAL.dtParametros.Rows.Add("@id_empleado", "1", Obj_Distribucion_DAL.iID_Empleado);
 
             Obj_Distribucion_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_DISTRIBUCION"],
                 "NORMAL", Obj_Distribucion_DAL.dtParametros);
-        }
-
-        public void List_Filt_Empleados(ref cls_Empleados_DAL Obj_Empleados_DAL)
-        {
-            WCF.BDClient Obj_WCF = new BDClient();
-
-            if (Obj_Empleados_DAL.iID_Empelado == 0)
-            {
-                Obj_Empleados_DAL.dtParametros = null;
-                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("Empleados", ConfigurationManager.AppSettings["LISTAR_EMPLEADOS"], null);
-            }
-            else
-            {
-                Obj_Empleados_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Empleados_DAL.dtParametros);
-
-                Obj_Empleados_DAL.dtParametros.Rows.Add("@filtro", "1", Obj_Empleados_DAL.iID_Empelado);
-
-                Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("Empleados", ConfigurationManager.AppSettings["FILTRAR_EMPLEADOS"], Obj_Empleados_DAL.dtParametros);
-            }
         }
     }
 }
