@@ -22,7 +22,7 @@ namespace BLL.MANTENIMIENTOS
             Obj_Otros_DAL.dtParametros.Rows.Add("@marca_Otro", "7", Obj_Otros_DAL.sMarca_Otro);
             Obj_Otros_DAL.dtParametros.Rows.Add("@modelo_Otro", "7", Obj_Otros_DAL.sModelo_Otro);
 
-            Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_OTRO"],
+            Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_OTROS"],
                 "NORMAL", Obj_Otros_DAL.dtParametros);
         }
 
@@ -34,7 +34,7 @@ namespace BLL.MANTENIMIENTOS
 
             Obj_Otros_DAL.dtParametros.Rows.Add("@id_Otro", "1", Obj_Otros_DAL.iId_Otro);
 
-            Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["BORRAR_OTRO"],
+            Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["BORRAR_OTROS"],
                 "NORMAL", Obj_Otros_DAL.dtParametros);
         }
 
@@ -70,7 +70,7 @@ namespace BLL.MANTENIMIENTOS
             Obj_Otros_DAL.dtParametros.Rows.Add("@modelo_Otro", "7", Obj_Otros_DAL.sModelo_Otro);
 
 
-            Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_OTRO"],
+            Obj_Otros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_OTROS"],
                 "NORMAL", Obj_Otros_DAL.dtParametros);
         }
     }
