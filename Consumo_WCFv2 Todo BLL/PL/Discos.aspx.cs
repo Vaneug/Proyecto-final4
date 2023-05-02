@@ -54,10 +54,10 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("No tiene discos para poder eliminar.",
+                MessageBox.Show("Disco eliminado.",
                                 "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                                MessageBoxIcon.Information);
             }
 
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());

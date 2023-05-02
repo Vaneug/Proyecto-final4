@@ -58,7 +58,7 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("No tiene equipos para poder eliminar.",
+                MessageBox.Show("Equipo eliminado.",
                                 "alerta",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);

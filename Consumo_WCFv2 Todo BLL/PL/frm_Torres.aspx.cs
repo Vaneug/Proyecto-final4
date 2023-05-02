@@ -95,10 +95,10 @@ namespace PL
         
             else
             {
-                MessageBox.Show("No tiene torres para poder eliminar.",
-                                "alerta",
+                MessageBox.Show("Torre eliminada.",
+                                "Success",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                                MessageBoxIcon.Information);
             }
             Obj_torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorre.Text.Trim());
 
@@ -124,6 +124,13 @@ namespace PL
             {
                 MessageBox.Show("El campo 'Modelo_Torre' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; //
+            }
+            else
+            {
+                MessageBox.Show("Torre Guardada.",
+                                "Sucess",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
             }
             Obj_torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorre.Text.Trim());
             Obj_torres_DAL.sMarca_Torre = txt_MarcaTorre.Text.Trim();

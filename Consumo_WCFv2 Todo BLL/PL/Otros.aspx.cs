@@ -50,7 +50,7 @@ namespace PL
 
             else
             {
-                MessageBox.Show("No tiene otros para poder eliminar.",
+                MessageBox.Show("Otros eliminado.",
                                 "alerta",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);

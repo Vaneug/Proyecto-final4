@@ -2,6 +2,7 @@
 using DAL.MANTENIMIENTOS;
 using System;
 using System.Web.UI;
+using System.Windows.Forms;
 
 namespace PL
 {
@@ -84,6 +85,19 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
+
+            if (string.IsNullOrEmpty(txt_IdDistribucion.Text))
+            {
+                MessageBox.Show("El campo 'ID_Distribucion' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("ID Distribucion modificado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Distribucion_DAL.iID_Dsitribucion = Convert.ToInt32(txt_IdDistribucion.Text.Trim());
             Obj_Distribucion_DAL.iID_Empleado = Convert.ToInt32(ddl_IdEmpleado.SelectedValue.Trim());
             Obj_Distribucion_DAL.iID_Equipo = Convert.ToInt32(ddl_IdEquipo.SelectedValue.Trim());
@@ -99,6 +113,18 @@ namespace PL
 
         protected void btn_Eliminar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdDistribucion.Text))
+            {
+                MessageBox.Show("El campo 'ID_Distribucion' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("ID eliminado.",
+                                "alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
 
             Obj_Distribucion_DAL.iID_Dsitribucion = Convert.ToInt32(txt_IdDistribucion.Text.Trim());
 
@@ -113,6 +139,18 @@ namespace PL
 
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdDistribucion.Text))
+            {
+                MessageBox.Show("El campo 'ID_Distribucion' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("ID Distribucion guardado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Distribucion_DAL.iID_Dsitribucion = Convert.ToInt32(txt_IdDistribucion.Text.Trim());
             Obj_Distribucion_DAL.iID_Empleado = Convert.ToInt32(ddl_IdEmpleado.SelectedValue.Trim());
             Obj_Distribucion_DAL.iID_Equipo = Convert.ToInt32(ddl_IdEquipo.SelectedValue.Trim());

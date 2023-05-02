@@ -48,7 +48,7 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("No tiene raton para poder eliminar.",
+                MessageBox.Show("Raton eliminado.",
                                 "alerta",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
@@ -95,6 +95,8 @@ namespace PL
             }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
             Obj_Raton_DAL.sTipo_Raton = txt_TipoRaton.Text.Trim();
+            Obj_Raton_DAL.sModelo_Raton = txt_ModeloRaton.Text.Trim();
+            Obj_Raton_DAL.sMarca_Raton = txt_MarcaRaton.Text.Trim();
 
             Obj_Raton_BLL.Actualizar_Raton(ref Obj_Raton_DAL);
 
@@ -143,6 +145,8 @@ namespace PL
             }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
             Obj_Raton_DAL.sTipo_Raton = txt_TipoRaton.Text.Trim();
+            Obj_Raton_DAL.sModelo_Raton = txt_ModeloRaton.Text.Trim();
+            Obj_Raton_DAL.sMarca_Raton = txt_MarcaRaton.Text.Trim();
 
             Obj_Raton_BLL.Insertar_Raton(ref Obj_Raton_DAL);
 

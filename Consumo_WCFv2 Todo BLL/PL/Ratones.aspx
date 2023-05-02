@@ -69,7 +69,7 @@
         </div>
         <br />
         <div style="text-align: right; margin-right: 220px;">
-            >
+            
                         <asp:ImageButton ID="btn_Guardar" src="Recursos/Imagenes/modificar.png" Height="30px" Width="30px" runat="server" Text="Actualizar" OnClick="btn_Guardar_Click" />
             &nbsp;
                         &nbsp;

@@ -56,10 +56,10 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("No tiene teclados para poder eliminar.",
+                MessageBox.Show("Teclado eliminado.",
                                 "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                                MessageBoxIcon.Information);
             }
 
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());

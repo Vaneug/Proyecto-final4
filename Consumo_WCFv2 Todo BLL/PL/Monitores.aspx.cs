@@ -54,10 +54,10 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("No tiene monitores para poder eliminar.",
-                                "alerta",
+                MessageBox.Show("Monitor eliminado.",
+                                "succes",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                                MessageBoxIcon.Information);
             }
 
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
