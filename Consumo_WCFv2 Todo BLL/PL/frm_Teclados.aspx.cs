@@ -45,6 +45,34 @@ namespace PL
             CargarDatosTeclados();
         }
 
+        protected void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+
+
+            if (string.IsNullOrEmpty(txt_IdTeclado.Text))
+            {
+                MessageBox.Show("El campo 'ID_Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("No tiene teclados para poder eliminar.",
+                                "alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
+
+            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
+
+            Obj_Teclados_BLL.Borrar_Teclado(ref Obj_Teclados_DAL);
+
+            txt_IdTeclado.Text = string.Empty;
+            //Agregan linea para probar
+            txtaFiltProd.Text = string.Empty;
+            
+            CargarDatosTeclados();
+        }
+
         protected void btn_Modificar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdTeclado.Text))
@@ -93,30 +121,7 @@ namespace PL
             CargarDatosTeclados();
         }
 
-        protected void btn_Eliminar_Click(object sender, EventArgs e)
-        {
-
-
-             if (string.IsNullOrEmpty(txt_IdTeclado.Text))
-            {
-                MessageBox.Show("El campo 'ID_Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
-            }
-            else
-            {
-                MessageBox.Show("No tiene teclados para poder eliminar.",
-                                "alerta",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-            }
-
-            Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
-
-            Obj_Teclados_BLL.Borrar_Teclado(ref Obj_Teclados_DAL);
-
-            txt_IdTeclado.Text = string.Empty;
-            CargarDatosTeclados();
-        }
+        
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
