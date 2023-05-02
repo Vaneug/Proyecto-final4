@@ -46,7 +46,6 @@ namespace PL
             CargarComboteclado();
             CargarCombosEstado();
         }
-
         protected void btn_Eliminar_Click(object sender, ImageClickEventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdEquipo.Text))
@@ -64,7 +63,6 @@ namespace PL
            
             CargarDatosEquipos();
         }
-
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
@@ -91,11 +89,9 @@ namespace PL
             ddlmarcamonitor.Text.Trim();
             CargarDatosEquipos();
         }
-
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
         {
             CargarDatosEquipos();
-        
         }
 
         protected void btn_Insertar_Click(object sender, ImageClickEventArgs e)

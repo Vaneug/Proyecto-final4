@@ -39,18 +39,15 @@ namespace PL
             dgv_Teclados.DataSource = Obj_Teclados_DAL.dtDatos;
             dgv_Teclados.DataBind();
         }
-
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
         {
             CargarDatosTeclados();
         }
-
         protected void btn_Modificar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdTeclado.Text) || String.IsNullOrEmpty(txt_MarcaTeclado.Text) || String.IsNullOrEmpty(txt_TipoTeclado.Text) || String.IsNullOrEmpty(txt_ModeloTeclado.Text))
             {
                 MessageBox.Show("Los campos ID-Teclado, Marca teclado, Tipo Teclado y Modelo teclado deben de estar completados");
-
                 return;
             }
 
@@ -68,11 +65,8 @@ namespace PL
             txt_TipoTeclado.Text = string.Empty;
             CargarDatosTeclados();
         }
-
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
-           
-
             if (string.IsNullOrEmpty(txt_IdTeclado.Text))
             {
                 MessageBox.Show("Debe completar el campo de identificación para eliminar");
@@ -87,7 +81,6 @@ namespace PL
             txt_IdTeclado.Text = string.Empty;
             CargarDatosTeclados();
         }
-
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdTeclado.Text))
