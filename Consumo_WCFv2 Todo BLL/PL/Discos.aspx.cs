@@ -40,7 +40,6 @@ namespace PL
             dgv_Disco.DataSource = Obj_Disco_DAL.dtDatos;
             dgv_Disco.DataBind();
         }
-
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
         {
             CargarDatosDiscos();
@@ -67,6 +66,17 @@ namespace PL
         
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdDisco.Text))
+            {
+                MessageBox.Show("El campo 'ID_Disco' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_TipoDisco.Text))
+            {
+                MessageBox.Show("El campo 'Tipo Disco' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
             Obj_Disco_DAL.sTipo_Disco = txt_TipoDisco.Text.Trim();
 

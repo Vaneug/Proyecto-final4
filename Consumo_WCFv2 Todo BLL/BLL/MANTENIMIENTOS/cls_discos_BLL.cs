@@ -24,7 +24,6 @@ namespace BLL.MANTENIMIENTOS
             Obj_discos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["ACTUALIZAR_DISCO"],
                 "NORMAL", Obj_discos_DAL.dtParametros);
         }
-
         public void Borrar_Discos(ref cls_discos_DAL Obj_discos_DAL)
         {
             WCF.BDClient Obj_WCF = new BDClient();
@@ -36,7 +35,6 @@ namespace BLL.MANTENIMIENTOS
             Obj_discos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["BORRAR_DISCO"],
                 "NORMAL", Obj_discos_DAL.dtParametros);
         }
-
         public void Insertar_Discos(ref cls_discos_DAL Obj_discos_DAL)
         {
             WCF.BDClient Obj_WCF = new BDClient();
@@ -46,7 +44,6 @@ namespace BLL.MANTENIMIENTOS
             Obj_discos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["INSERTAR_DISCO"],
                 "NORMAL", Obj_discos_DAL.dtParametros);
         }
-        
         public void List_Filt_Discos(ref cls_discos_DAL Obj_Discos_DAL)
         {
             WCF.BDClient Obj_WCF = new WCF.BDClient();

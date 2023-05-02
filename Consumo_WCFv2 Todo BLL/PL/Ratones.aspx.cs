@@ -43,10 +43,15 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdRaton.Text))
             {
-
-                MessageBox.Show("Debe completar el campo de identificación para eliminar");
-
-                return;
+                MessageBox.Show("El campo 'ID_Raton' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("No tiene ratones para poder eliminar.",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
             }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
 
@@ -59,6 +64,28 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdRaton.Text))
+            {
+                MessageBox.Show("El campo 'ID_Raton' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_TipoRaton.Text))
+            {
+                MessageBox.Show("El campo 'Tipo Raton' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            if (string.IsNullOrEmpty(txt_MarcaRaton.Text))
+            {
+                MessageBox.Show("El campo 'Marca Raton' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_ModeloRaton.Text))
+            {
+                MessageBox.Show("El campo 'Modelo Raton' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
             Obj_Raton_DAL.sTipo_Raton = txt_TipoRaton.Text.Trim();
 

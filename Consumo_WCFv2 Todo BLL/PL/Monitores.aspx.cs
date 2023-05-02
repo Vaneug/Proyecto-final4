@@ -42,18 +42,27 @@ namespace PL
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
         {
             CargarDatosMonitores();
+                      
         }
-
+      
         protected void btn_Eliminar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdMonitor.Text))
             {
-                MessageBox.Show("Debe completar la informacion");
-                return;
+                MessageBox.Show("El campo 'ID_Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("No tiene monitores para poder eliminar.",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
             }
 
+
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
-          
+
             Obj_Monitor_BLL.Borrar_Monitor(ref Obj_Monitor_DAL);
 
             txt_IdMonitor.Text = string.Empty;
@@ -63,7 +72,28 @@ namespace PL
 
         protected void btn_Insertar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdMonitor.Text))
+            {
+                MessageBox.Show("El campo 'ID_Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
 
+            if (string.IsNullOrEmpty(txt_TipoMonitor.Text))
+            {
+                MessageBox.Show("El campo 'Tipo Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            if (string.IsNullOrEmpty(txt_MarcaMonitor.Text))
+            {
+                MessageBox.Show("El campo 'Marca Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_ModeloMonitor.Text))
+            {
+                MessageBox.Show("El campo 'Modelo Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
             Obj_Monitor_DAL.sMarca_Monitor = txt_MarcaMonitor.Text.Trim();
             Obj_Monitor_DAL.sModelo_Monitor = txt_ModeloMonitor.Text.Trim();
@@ -81,6 +111,31 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdMonitor.Text))
+            {
+                MessageBox.Show("El campo 'ID_Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_TipoMonitor.Text))
+            {
+                MessageBox.Show("El campo 'Tipo Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            if (string.IsNullOrEmpty(txt_MarcaMonitor.Text))
+            {
+                MessageBox.Show("El campo 'Marca Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_ModeloMonitor.Text))
+            {
+                MessageBox.Show("El campo 'Modelo Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+
+
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
             Obj_Monitor_DAL.sMarca_Monitor = txt_MarcaMonitor.Text.Trim();
             Obj_Monitor_DAL.sModelo_Monitor = txt_ModeloMonitor.Text.Trim();
@@ -95,7 +150,6 @@ namespace PL
             txt_TipoMonitor.Text = string.Empty;
             CargarDatosMonitores();
         }
-
 
     }
 }
