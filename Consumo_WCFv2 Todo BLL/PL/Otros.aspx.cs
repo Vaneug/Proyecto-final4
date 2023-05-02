@@ -44,16 +44,19 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdOtro.Text))
             {
-                MessageBox.Show("El campo 'ID_Otro' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo 'ID_Memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+
             else
             {
                 MessageBox.Show("No tiene otros para poder eliminar.",
-                                "Alerta",
+                                "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Warning);
             }
+
+
             Obj_Otro_DAL.iId_Otro = Convert.ToInt32(txt_IdOtro.Text.Trim());
 
             Obj_Otro_BLL.Borrar_Otro(ref Obj_Otro_DAL);
@@ -62,7 +65,7 @@ namespace PL
             txt_filtrar.Text = string.Empty;
             CargarDatosOtros();
         }
-
+    
         protected void btn_Guardar_Click(object sender, ImageClickEventArgs e)
         {
             if (string.IsNullOrEmpty(txt_IdOtro.Text))
@@ -87,6 +90,13 @@ namespace PL
                 MessageBox.Show("El campo 'Modelo modelo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("Otros modificado.",
+                                "Access",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Otro_DAL.iId_Otro = Convert.ToInt32(txt_IdOtro.Text.Trim());
             Obj_Otro_DAL.sMarca_Otro = txt_MarcaOtro.Text.Trim();
             Obj_Otro_DAL.sModelo_Otro = txt_ModeloOtro.Text.Trim();
@@ -132,6 +142,13 @@ namespace PL
                 MessageBox.Show("El campo 'Modelo modelo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("Otros guardado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Otro_DAL.iId_Otro = Convert.ToInt32(txt_IdOtro.Text.Trim());
             Obj_Otro_DAL.sMarca_Otro = txt_MarcaOtro.Text.Trim();
             Obj_Otro_DAL.sModelo_Otro = txt_ModeloOtro.Text.Trim();
