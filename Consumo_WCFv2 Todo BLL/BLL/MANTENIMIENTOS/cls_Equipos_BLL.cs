@@ -16,11 +16,11 @@ namespace BLL.MANTENIMIENTOS
             WCF.BDClient Obj_WCF = new BDClient();
 
             Obj_Equipos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Equipos_DAL.dtParametros);
-
             Obj_Equipos_DAL.dtParametros.Rows.Add("@id_Equipo", "1", Obj_Equipos_DAL.iId_Equipo);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@estado_Id", "1", Obj_Equipos_DAL.iEstado_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@torre_Id", "1", Obj_Equipos_DAL.iTorre_Id);
-            Obj_Equipos_DAL.dtParametros.Rows.Add("@raton_id", "1", Obj_Equipos_DAL.iRaton_Id);
+            Obj_Equipos_DAL.dtParametros.Rows.Add("@teclado_Id", "1", Obj_Equipos_DAL.iTeclado_Id);
+            Obj_Equipos_DAL.dtParametros.Rows.Add("@raton_Id", "1", Obj_Equipos_DAL.iRaton_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@otro_Id", "1", Obj_Equipos_DAL.iOtro_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@disco_Id", "1", Obj_Equipos_DAL.iDisco_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@memoria_Id", "1", Obj_Equipos_DAL.iMemoria_Id);
@@ -69,7 +69,8 @@ namespace BLL.MANTENIMIENTOS
             Obj_Equipos_DAL.dtParametros.Rows.Add("@id_Equipo", "1", Obj_Equipos_DAL.iId_Equipo);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@estado_Id", "1", Obj_Equipos_DAL.iEstado_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@torre_Id", "1", Obj_Equipos_DAL.iTorre_Id);
-            Obj_Equipos_DAL.dtParametros.Rows.Add("@raton_id", "1", Obj_Equipos_DAL.iRaton_Id);
+            Obj_Equipos_DAL.dtParametros.Rows.Add("@teclado_Id", "1", Obj_Equipos_DAL.iTeclado_Id);
+            Obj_Equipos_DAL.dtParametros.Rows.Add("@raton_Id", "1", Obj_Equipos_DAL.iRaton_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@otro_Id", "1", Obj_Equipos_DAL.iOtro_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@disco_Id", "1", Obj_Equipos_DAL.iDisco_Id);
             Obj_Equipos_DAL.dtParametros.Rows.Add("@memoria_Id", "1", Obj_Equipos_DAL.iMemoria_Id);

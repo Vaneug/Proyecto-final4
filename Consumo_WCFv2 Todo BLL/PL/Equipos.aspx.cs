@@ -35,16 +35,19 @@ namespace PL
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                CargarDatosEquipos();
+                CargarComboDisco();
+                CargarComboMemoria();
+                CargarComboRaton();
+                CargarCombostorre();
+                CargarComboOtro();
+                CargarCombosMonitor();
+                CargarComboteclado();
+                CargarCombosEstado();
+            }
 
-            CargarDatosEquipos();
-            CargarComboDisco();
-            CargarComboMemoria();
-            CargarComboRaton();
-            CargarCombostorre();
-            CargarComboOtro();
-            CargarCombosMonitor();
-            CargarComboteclado();
-            CargarCombosEstado();
         }
         protected void btn_Eliminar_Click(object sender, ImageClickEventArgs e)
         {
@@ -84,14 +87,14 @@ namespace PL
                                 MessageBoxIcon.Information);
             }
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
-            Obj_Equipo_DAL.sEstado = ddlEstado.Text.Trim();
-            Obj_Equipo_DAL.sTipoTorre = ddltipotorre.Text.Trim();
-            Obj_Equipo_DAL.sTipoTeclado = ddltipoteclado.Text.Trim();
-            Obj_Equipo_DAL.sTipoRaton = ddlTipoRaton.Text.Trim();
-            Obj_Equipo_DAL.sTipoOtro = ddlTipoOtro.Text.Trim();
-            Obj_Equipo_DAL.sTipoDisco = ddltipodisco.Text.Trim();
-            Obj_Equipo_DAL.sMarcaMemoria = ddlmarcamemoria.Text.Trim();
-            Obj_Equipo_DAL.sMarcaMonitor = ddlmarcamonitor.Text.Trim();
+            Obj_Equipo_DAL.iEstado_Id = Convert.ToInt32(ddlEstado.SelectedValue.Trim());
+            Obj_Equipo_DAL.iTorre_Id = Convert.ToInt32(ddltipotorre.SelectedValue.Trim());
+            Obj_Equipo_DAL.iTeclado_Id = Convert.ToInt32(ddltipoteclado.SelectedValue.Trim());
+            Obj_Equipo_DAL.iRaton_Id = Convert.ToInt32(ddlTipoRaton.SelectedValue.Trim());
+            Obj_Equipo_DAL.iOtro_Id = Convert.ToInt32(ddlTipoOtro.SelectedValue.Trim());
+            Obj_Equipo_DAL.iDisco_Id = Convert.ToInt32(ddltipodisco.SelectedValue.Trim());
+            Obj_Equipo_DAL.iMemoria_Id = Convert.ToInt32(ddlmarcamemoria.SelectedValue.Trim());
+            Obj_Equipo_DAL.iMonitor_Id = Convert.ToInt32(ddlmarcamonitor.SelectedValue.Trim());
 
             Obj_Equipo_BLL.Actualizar_Equipo(ref Obj_Equipo_DAL);
 
@@ -127,16 +130,16 @@ namespace PL
                                 MessageBoxIcon.Information);
             }
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
-            Obj_Equipo_DAL.sEstado = ddlEstado.Text.Trim();
-            Obj_Equipo_DAL.sTipoTorre = ddltipotorre.Text.Trim();
-            Obj_Equipo_DAL.sTipoTeclado = ddltipoteclado.Text.Trim();
-            Obj_Equipo_DAL.sTipoRaton = ddlTipoRaton.Text.Trim();
-            Obj_Equipo_DAL.sTipoOtro = ddlTipoOtro.Text.Trim();
-            Obj_Equipo_DAL.sTipoDisco = ddltipodisco.Text.Trim();
-            Obj_Equipo_DAL.sMarcaMemoria = ddlmarcamemoria.Text.Trim();
-            Obj_Equipo_DAL.sMarcaMonitor = ddlmarcamonitor.Text.Trim();
+            Obj_Equipo_DAL.iEstado_Id = Convert.ToInt32(ddlEstado.SelectedValue.Trim());
+            Obj_Equipo_DAL.iTorre_Id = Convert.ToInt32(ddltipotorre.SelectedValue.Trim());
+            Obj_Equipo_DAL.iTeclado_Id = Convert.ToInt32(ddltipoteclado.SelectedValue.Trim());
+            Obj_Equipo_DAL.iRaton_Id = Convert.ToInt32(ddlTipoRaton.SelectedValue.Trim());
+            Obj_Equipo_DAL.iOtro_Id = Convert.ToInt32(ddlTipoOtro.SelectedValue.Trim());
+            Obj_Equipo_DAL.iDisco_Id = Convert.ToInt32(ddltipodisco.SelectedValue.Trim());
+            Obj_Equipo_DAL.iMemoria_Id = Convert.ToInt32(ddlmarcamemoria.SelectedValue.Trim());
+            Obj_Equipo_DAL.iMonitor_Id = Convert.ToInt32(ddlmarcamonitor.SelectedValue.Trim());
 
-            Obj_Equipo_BLL.Actualizar_Equipo(ref Obj_Equipo_DAL);
+            Obj_Equipo_BLL.Insertar_Equipo(ref Obj_Equipo_DAL);
 
             txt_IdEquipo.Text = string.Empty;
             txt_filtrar.Text = string.Empty;
