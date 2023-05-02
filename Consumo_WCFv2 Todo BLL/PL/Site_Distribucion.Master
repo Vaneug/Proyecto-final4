@@ -7,7 +7,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--<link href="Content/bootstrap.css" rel="stylesheet" /> -->
     <!--<link href="styles/style.css" rel="stylesheet" /> -->
-    <link href="Recursos/Estilos/Estilos_Inicio.css" rel="stylesheet" />
+        <link href="Recursos/Estilos/Estilos_Inicio.css" rel="stylesheet" />
+    <link href="Recursos/Estilos/Estilo_Global.css" rel="stylesheet" />
+    <link href="Recursos/Estilos/Estilos_TXT.css" rel="stylesheet" />
+    <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
     <title></title>
 </head>
 <center><img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" /></center>

@@ -19,8 +19,12 @@ namespace PL
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarDatosDistribucion();
-            CargarCombos();
+            if (!Page.IsPostBack)
+            {
+                CargarDatosDistribucion();
+                CargarCombos();
+            }
+            
         }
 
         private void CargarDatosDistribucion()
@@ -62,7 +66,7 @@ namespace PL
 
             Obj_Equipos_BLL.List_Filt_Equipo(ref Obj_Equipos_DAL);
 
-            //Obj_Equipos_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EQUIPO ---");
+            Obj_Equipos_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN EQUIPO ---");
 
             ddl_IdEquipo.DataSource = null;
             ddl_IdEquipo.DataTextField = "Identificacion equipo";
@@ -70,7 +74,7 @@ namespace PL
             ddl_IdEquipo.DataSource = Obj_Equipos_DAL.dtDatos;
             ddl_IdEquipo.DataBind();
 
-            ddl_IdEquipo.SelectedValue = "1";
+            ddl_IdEmpleado.SelectedValue = "0";
         }
 
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
