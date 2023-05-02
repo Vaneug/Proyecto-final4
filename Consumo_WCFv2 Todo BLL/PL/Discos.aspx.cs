@@ -40,7 +40,6 @@ namespace PL
             dgv_Disco.DataSource = Obj_Disco_DAL.dtDatos;
             dgv_Disco.DataBind();
         }
-
         protected void btnFiltrar_Click(object sender, ImageClickEventArgs e)
         {
             CargarDatosDiscos();
