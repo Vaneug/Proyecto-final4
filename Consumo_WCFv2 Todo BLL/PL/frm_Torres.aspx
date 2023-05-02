@@ -50,17 +50,9 @@
                     <asp:TextBox CssClass="CajasTextos" ID="txt_ModeloTorre" runat="server" Height="31px" Width="375px"></asp:TextBox>
                     
                 </div>
-                <div>
-                    <asp:Label ID="lbl_IdDisco" runat="server" Text="Id Disco: "></asp:Label>
-                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdDisco" runat="server" Height="31px" Width="375px"></asp:TextBox>
-                </div>
             </div>
 
             <br />
-            <div class="TextoPrimero" align="center">
-                <asp:Label ID="lbl_IdMemoria" runat="server" Text="Id Memoria: "></asp:Label>
-                 <asp:TextBox CssClass="CajasTextos" ID="txt_IdMemoria" runat="server" Height="31px" Width="375px"></asp:TextBox>
-            </div>
             <br />
             <br />
             <div style="text-align: right; margin-right: 220px;">
