@@ -102,7 +102,7 @@ namespace PL
             Obj_Otro_DAL.sModelo_Otro = txt_ModeloOtro.Text.Trim();
             Obj_Otro_DAL.sTipo_Otro = txt_TipoOtro.Text.Trim();
 
-            Obj_Otro_BLL.Insertar_Otro(ref Obj_Otro_DAL);
+            Obj_Otro_BLL.Actualizar_Otro(ref Obj_Otro_DAL);
 
             txt_IdOtro.Text = string.Empty;
             txt_filtrar.Text = string.Empty;
@@ -154,7 +154,7 @@ namespace PL
             Obj_Otro_DAL.sModelo_Otro = txt_ModeloOtro.Text.Trim();
             Obj_Otro_DAL.sTipo_Otro = txt_TipoOtro.Text.Trim();
 
-            Obj_Otro_BLL.Actualizar_Otro(ref Obj_Otro_DAL);
+            Obj_Otro_BLL.Insertar_Otro(ref Obj_Otro_DAL);
 
             txt_IdOtro.Text = string.Empty;
             txt_filtrar.Text = string.Empty;

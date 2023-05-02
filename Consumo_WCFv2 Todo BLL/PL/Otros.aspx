@@ -23,7 +23,7 @@
         <br />
         <br />
     </div>
-    <div id="div_Editar" style="display: none">
+    <div id="div_Editar" style="display: block">
         <p>Edición de Datos de Otros.</p>
         <div>
             <div class="TextoPrimero">

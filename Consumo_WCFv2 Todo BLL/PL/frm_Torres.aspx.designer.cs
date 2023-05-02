@@ -96,42 +96,6 @@ namespace PL
         protected global::System.Web.UI.WebControls.TextBox txt_ModeloTorre;
 
         /// <summary>
-        /// lbl_IdDisco control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_IdDisco;
-
-        /// <summary>
-        /// txt_IdDisco control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdDisco;
-
-        /// <summary>
-        /// lbl_IdMemoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_IdMemoria;
-
-        /// <summary>
-        /// txt_IdMemoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_IdMemoria;
-
-        /// <summary>
         /// btn_Guardar control.
         /// </summary>
         /// <remarks>
