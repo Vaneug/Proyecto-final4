@@ -77,7 +77,7 @@ namespace PL
             Obj_torres_DAL.sMarca_Torre = txt_MarcaTorre.Text.Trim();
             Obj_torres_DAL.sModelo_Torre = txt_ModeloTorre.Text.Trim();
 
-            Obj_torres_BLL.Insertar_Torre(ref Obj_torres_DAL);
+            Obj_torres_BLL.Actualizar_Torre(ref Obj_torres_DAL);
 
             txt_IdTorre.Text = string.Empty;
             txt_MarcaTorre.Text = string.Empty;
