@@ -64,7 +64,7 @@
     </div>
     <br />
 
-    </div>
+    
             <div>
                 <asp:GridView ID="dgv_Raton" runat="server" Width="900px"></asp:GridView>
             </div>

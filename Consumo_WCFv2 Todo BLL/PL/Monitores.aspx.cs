@@ -49,17 +49,16 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdMonitor.Text))
             {
-                MessageBox.Show("El campo 'ID_Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo 'ID_Memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
             else
             {
                 MessageBox.Show("No tiene monitores para poder eliminar.",
-                                "Alerta",
+                                "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Warning);
             }
-
 
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
 
@@ -94,6 +93,13 @@ namespace PL
                 MessageBox.Show("El campo 'Modelo Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("Monitor guardado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());
             Obj_Monitor_DAL.sMarca_Monitor = txt_MarcaMonitor.Text.Trim();
             Obj_Monitor_DAL.sModelo_Monitor = txt_ModeloMonitor.Text.Trim();
@@ -133,7 +139,13 @@ namespace PL
                 MessageBox.Show("El campo 'Modelo Monitor' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
-
+            else
+            {
+                MessageBox.Show("Monitor modificado.",
+                                "Access",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
 
 
             Obj_Monitor_DAL.iId_Monitor = Convert.ToInt32(txt_IdMonitor.Text.Trim());

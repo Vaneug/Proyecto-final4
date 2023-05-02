@@ -27,22 +27,26 @@
         <div>
             <div class="TextoPrimero" align="center">
                 <div>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_IdEquipo" runat="server" Text="Id: "></asp:Label>
-                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdEquipo" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdEquipo" runat="server" Height="31px" Width="360px"></asp:TextBox>
                 </div>
                 <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_Estado" runat="server" Text="Estado: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddlEstado" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>
             </div>
             <br />
 
-            <div class="TextoPrimero" align="center">
+           <div class="TextoPrimero" align="center">
                 <div>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_TipoTorre" runat="server" Text="Tipo Torre: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddltipotorre" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>
                 <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_TipoTeclado" runat="server" Text="Tipo Teclado: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddltipoteclado" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>
@@ -52,10 +56,12 @@
 
             <div class="TextoPrimero" align="center">
                 <div>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_TipoRaton" runat="server" Text="Tipo Raton: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddlTipoRaton" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>
                 <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_TipoOtro" runat="server" Text="Tipo Otro: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddlTipoOtro" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>
@@ -63,10 +69,12 @@
             <br />
             <div class="TextoPrimero" align="center">
                 <div>
-                    <asp:Label ID="lbl_TipoDisco" runat="server" Text="Marca: "></asp:Label>
-                    <asp:DropDownList CssClass="CajasTextos" ID="ddltipodisco" runat="server"></asp:DropDownList>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="lbl_TipoDisco" runat="server" Text="Tipo Disco:  " ></asp:Label>
+                    <asp:DropDownList CssClass="CajasTextos" ID="ddltipodisco" runat="server" Height="31px" Width="360px"></asp:DropDownList>
                 </div>
                 <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_MarcaMemoria" runat="server" Text="Marca Memoria: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddlmarcamemoria" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>
@@ -76,6 +84,7 @@
 
             <div class="TextoPrimero" align="center">
                 <div>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_MarcaMonitor" runat="server" Text="Marca Monitor: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddlmarcamonitor" runat="server"  Height="31px" Width="360px"></asp:DropDownList>
                 </div>

@@ -49,11 +49,17 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdDisco.Text))
             {
-
-                MessageBox.Show("Debe completar el campo de identificación para eliminar");
-
-                return;
+                MessageBox.Show("El campo 'ID_Disco' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("No tiene discos para poder eliminar.",
+                                "alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
+
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
 
             Obj_Disco_BLL.Borrar_Discos(ref Obj_Disco_DAL);
@@ -77,6 +83,13 @@ namespace PL
                 MessageBox.Show("El campo 'Tipo Disco' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("Disco modificado.",
+                                "Access",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
             Obj_Disco_DAL.sTipo_Disco = txt_TipoDisco.Text.Trim();
 
@@ -101,7 +114,13 @@ namespace PL
                 MessageBox.Show("El campo 'Tipo Disco' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
-           
+            else
+            {
+                MessageBox.Show("Disco guardado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Disco_DAL.iId_Disco = Convert.ToInt32(txt_IdDisco.Text.Trim());
             Obj_Disco_DAL.sTipo_Disco = txt_TipoDisco.Text.Trim();
 
