@@ -284,7 +284,7 @@ namespace PL
             Obj_Monitor_DAL.dtDatos.Rows.Add("0", "--- SELECCIONE UN MONITOR ---");
 
             ddlmarcamonitor.DataSource = null;
-            ddlmarcamonitor.DataTextField = "Tipo";
+            ddlmarcamonitor.DataTextField = "Marca";
             ddlmarcamonitor.DataValueField = "ID";
             ddlmarcamonitor.DataSource = Obj_Monitor_DAL.dtDatos;
             ddlmarcamonitor.DataBind();

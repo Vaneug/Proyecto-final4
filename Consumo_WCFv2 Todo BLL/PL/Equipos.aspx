@@ -63,7 +63,7 @@
             <br />
             <div class="TextoPrimero" align="center">
                 <div>
-                    <asp:Label ID="lbl_TipoDisco" runat="server" Text="Marca: "></asp:Label>
+                    <asp:Label ID="lbl_TipoDisco" runat="server" Text="Tipo Disco: "></asp:Label>
                     <asp:DropDownList CssClass="CajasTextos" ID="ddltipodisco" runat="server"></asp:DropDownList>
                 </div>
                 <div>
