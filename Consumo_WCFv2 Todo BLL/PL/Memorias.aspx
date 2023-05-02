@@ -6,6 +6,7 @@
     <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <script src="Funciones.js"></script>
     <div>
         &nbsp;&nbsp;<img src="Recursos/Imagenes/Memorias.png" style=" width: 200px;"/>&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lbl_Memoria" runat="server" Text="Id Memoria: "></asp:Label>
@@ -29,8 +30,15 @@
             <div class="TextoPrimero" align="center">
                 <div>
                     <asp:Label ID="lbl_IdMemoria" runat="server" Text="Id: "></asp:Label>
-                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdMemoria" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdMemoria" runat="server" Height="31px" Width="375px" ToolTip="Solo se permiten numeros"
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_IdMemoria" ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                 </div>
+                
                 <div>
                     <asp:Label ID="lbl_TipoMemoria" runat="server" Text="Tipo: "></asp:Label>
                     <asp:TextBox CssClass="CajasTextos" ID="txt_TipoMemoria" runat="server" Height="31px" Width="375px"></asp:TextBox>
@@ -39,13 +47,13 @@
 
             <br />
             <div style="text-align: right; margin-right: 220px;">
-                <asp:ImageButton ID="btn_Guardar" src="Recursos/Imagenes/modificar.png" Height="30px" Width="30px" runat="server" Text="Actualizar" OnClick="btn_Guardar_Click" />
+                <asp:ImageButton ID="btn_Guardar" src="Recursos/Imagenes/modificar.png" Height="30px" Width="30px" runat="server" Text="Actualizar" OnClick="btn_Guardar_Click" Tooltip="Modificar"/>
                 &nbsp;
                         &nbsp;
-                        <asp:ImageButton ID="btn_Eliminar" src="Recursos/Imagenes/eliminar.png" Height="30px" Width="30px" runat="server" Text="Eliminar" OnClick="btn_Eliminar_Click" />
+                        <asp:ImageButton ID="btn_Eliminar" src="Recursos/Imagenes/eliminar.png" Height="30px" Width="30px" runat="server" Text="Eliminar" OnClick="btn_Eliminar_Click" ToolTip="Eliminar" />
                 &nbsp;
                         &nbsp;
-                        <asp:ImageButton ID="btnInsertar" src="Recursos/Imagenes/guardar.png" Height="30px" Width="30px" runat="server" Text="Insertar" OnClick="btn_Insertar_Click" />
+                        <asp:ImageButton ID="btnInsertar" src="Recursos/Imagenes/guardar.png" Height="30px" Width="30px" runat="server" Text="Insertar" OnClick="btn_Insertar_Click" ToolTip="Guardar"/>
             </div>
 
         </div>
@@ -55,4 +63,6 @@
     <div>
                 <asp:GridView ID="dgv_Memoria" runat="server" Width="900px"></asp:GridView>
             </div>
+
 </asp:Content>
+

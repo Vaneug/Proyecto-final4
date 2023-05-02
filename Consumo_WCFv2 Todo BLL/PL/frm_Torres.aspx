@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="Recursos/Estilos/Estilos_TXT.css" rel="stylesheet" />
     <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.min.js"></script>
+    <script src="Funciones.js"></script>
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -11,28 +14,40 @@
         
         <asp:Label ID="lblProducto" runat="server" Text="Id Torres: "></asp:Label>
         &nbsp;
-         <asp:TextBox CssClass="CajasTextos" ID="txtaFiltProd" runat="server"></asp:TextBox>
+         <asp:TextBox CssClass="CajasTextos" ID="txtaFiltProd" runat="server" ToolTip="Solo se permiten numeros"
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                            ControlToValidate="txtaFiltProd" ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
         &nbsp;
              &nbsp;
              &nbsp;
              &nbsp;
-        <asp:ImageButton ID="btnFiltrar" src="Recursos/Imagenes/lupa.png" runat="server" Height="30px" Width="30px" OnClick="btnFiltrar_Click" />
+        <asp:ImageButton ID="btnFiltrar" src="Recursos/Imagenes/lupa.png" runat="server" Height="30px" Width="30px" OnClick="btnFiltrar_Click"  ToolTip="Buscar"/>
         &nbsp;
              &nbsp;
-           <input id="btn_editar" type="button" value="Editar" onclick="toggle()" />
+           <input id="btn_editar" type="button" value="Editar" onclick="toggle()"/>
 
         
 
     </div>
     <br />
-    <div id="div_Editar" style="display: block">
+    <div id="div_Editar" style="display: none">
         <p class="lead">Edición de Datos de Torres.</p>
         <div>
             <div class="TextoPrimero" align="center">
                 <div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="lbl_IdTorre" runat="server" Text="Id: "></asp:Label>
-                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdTorre" runat="server" Height="31px" Width="375px"></asp:TextBox>
+                    <asp:TextBox CssClass="CajasTextos" ID="txt_IdTorre" runat="server" Height="31px" Width="375px" ToolTip="Solo se permiten numeros"
+                        onkeypress="javascript:return solonumeros(event)">
+                    </asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="txt_IdTorre" ErrorMessage="Solo Numeros"
+                            ForeColor="Red"
+                            ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                     
                 </div>
                 <div>

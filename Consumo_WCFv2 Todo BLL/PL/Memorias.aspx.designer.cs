@@ -60,6 +60,15 @@ namespace PL
         protected global::System.Web.UI.WebControls.TextBox txt_IdMemoria;
 
         /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+
+        /// <summary>
         /// lbl_TipoMemoria control.
         /// </summary>
         /// <remarks>

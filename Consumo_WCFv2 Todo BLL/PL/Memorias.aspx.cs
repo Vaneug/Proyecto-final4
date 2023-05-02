@@ -76,7 +76,7 @@ namespace PL
                 MessageBox.Show("El campo 'Tipo de memoria' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
-
+            
             else
             {
                 MessageBox.Show("Memoria modificada.",
