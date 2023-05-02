@@ -1,46 +1,67 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PL.SiteMaster" %>
-
 <!DOCTYPE html>
-
 <html lang="en">
-<head runat="server">
+    <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Recursos/Estilos/Estilos_Inicio.css" rel="stylesheet" />
     <link href="Recursos/Estilos/Estilo_Global.css" rel="stylesheet" />
-</head>
+    <link href="Recursos/Estilos/Estilo_Menu.css" rel="stylesheet" />
+    <link href="Recursos/Estilos/Estilos_TXT.css" rel="stylesheet" />
+    <link href="Recursos/Estilos/Estilos_Botones.css" rel="stylesheet" />
+</head>  
 <body>
     <a href="Index.aspx">
-    <center>
-        <img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" draggable="false" /></center>
-    </a>
-    <form runat="server">
-        <div class="sidebar">
-            <a id="Enlace" href="Index.aspx">Inicio</a>
-            <a id="Enlace" href="frm_Torres.aspx">Torres</a>
-            <a id="Enlace" href="frm_Teclados.aspx">Teclados</a>
-            <a id="Enlace" href="Monitores.aspx">Monitores</a>
-            <a id="Enlace" href="Ratones.aspx">Ratones</a>
-            <a id="Enlace" href="Discos.aspx">Discos</a>
-            <a id="Enlace" href="Memorias.aspx">Memorias</a>
-            <a id="Enlace" href="Equipos.aspx">Equipos</a>
-            <a id="Enlace" href="Otros.aspx">Otros</a>
-        </div>
-        <div class="content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
+    <center><img id="logo" src="Recursos/Imagenes/Logo.png" alt="Logo" draggable="false" /></center></a>
+        <form runat="server">
+            <div class="content">
+                <header style="position:relative">         
+            
+                <asp:menu id="NavigationMenu" staticdisplaylevels="2" staticsubmenuindent="10" orientation="Horizontal" runat="server">
+                    <LevelMenuItemStyles>  
+                        <asp:MenuItemStyle CssClass="ChildMenu" />  
+                        <asp:MenuItemStyle CssClass="ChildMenu" />  
+                        <asp:MenuItemStyle CssClass="ChildMenu" />  
+                    </LevelMenuItemStyles>  
+                    <StaticSelectedStyle CssClass="selected" />
+
+                    <dynamicmenustyle backcolor="#00A885" forecolor="blue" borderstyle="Solid" borderwidth="1" bordercolor="White" />                
+                        <items>
+                            <asp:menuitem navigateurl="Index.aspx" text="Inicio" tooltip="Inicio">
+                            <asp:menuitem navigateurl="Distribución.aspx" text="Distribución" tooltip="Distribución"></asp:menuitem>
+                            <asp:menuitem navigateurl="#" text="Inventario" tooltip="Inventario">
+                                <asp:menuitem navigateurl="frm_Torres.aspx" text="Torres" tooltip="Torres"></asp:menuitem>
+                                <asp:menuitem navigateurl="frm_Teclados.aspx" text="Teclados" tooltip="Teclados"></asp:menuitem>
+                                <asp:menuitem navigateurl="Monitores.aspx" text="Monitores" tooltip="Monitores"></asp:menuitem>
+                                <asp:menuitem navigateurl="Ratones.aspx" text="Ratones" tooltip="Ratones"></asp:menuitem>
+                                <asp:menuitem navigateurl="Discos.aspx" text="Discos" tooltip="Discos"></asp:menuitem>
+                                <asp:menuitem navigateurl="Memorias.aspx" text="Memorias" tooltip="Memorias"></asp:menuitem>
+                                <asp:menuitem navigateurl="Equipos.aspx" text="Equipos" tooltip="Equipos"></asp:menuitem>
+                                <asp:menuitem navigateurl="Otros.aspx" text="Otros" tooltip="Otros"></asp:menuitem>
+                            </asp:menuitem>
+                            </asp:menuitem>
+                        </items>      
+                </asp:menu>
+            </header>
+            <br />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            
+    </div>
+    <img id="WhatsApp" align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="Whatsapp" />
+    <img id="Instagram" align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/600px-Instagram-Icon.png" alt="Instagram" />
+    <img id="Facebook" align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/1024px-Logo_de_Facebook.png" alt="Facebook" />
+</form>
+
 </body>
+
 <script>
 
     function toggle() {

@@ -1,0 +1,36 @@
+﻿.ParentMenu, .ParentMenu:hover {
+    width: 100px;
+    background-color: #00A885;
+    color: white;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+ParentMenu:hover {
+    background-color: #ccc;
+}
+
+.ChildMenu, .ChildMenu:hover {
+    width: 110px;
+    background-color: #00A885;
+    color: white;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+    .ChildMenu:hover {
+        background-color: #ccc;
+    }
+
+.selected, .selected:hover {
+    background-color: #A6A6A6 !important;
+    color: #fff;
+}
+
+.level2 {
+    background-color: #00A885;
+}
