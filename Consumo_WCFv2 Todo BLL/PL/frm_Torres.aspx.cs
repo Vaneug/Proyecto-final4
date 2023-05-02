@@ -49,7 +49,40 @@ namespace PL
 
         protected void btn_Guardar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_IdTorre.Text))
+            {
+                MessageBox.Show("El campo 'ID_Torre' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
 
+            if (string.IsNullOrEmpty(txt_MarcaTorre.Text))
+            {
+                MessageBox.Show("El campo 'Marca Torre' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+
+            if (string.IsNullOrEmpty(txt_ModeloTorre.Text))
+            {
+                MessageBox.Show("El campo 'Modelo Torre' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("Torre modificada.",
+                                "Access",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            Obj_torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorre.Text.Trim());
+            Obj_torres_DAL.sMarca_Torre = txt_MarcaTorre.Text.Trim();
+            Obj_torres_DAL.sModelo_Torre = txt_ModeloTorre.Text.Trim();
+
+            Obj_torres_BLL.Insertar_Torre(ref Obj_torres_DAL);
+
+            txt_IdTorre.Text = string.Empty;
+            txt_MarcaTorre.Text = string.Empty;
+            txt_ModeloTorre.Text = string.Empty;
+            CargarDatos();
         }
 
         protected void btn_Eliminar_Click(object sender, EventArgs e)
