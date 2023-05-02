@@ -70,6 +70,14 @@ namespace PL
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
 
+            else
+            {
+                MessageBox.Show("Teclado modificado.",
+                                "Access",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
             Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();
             Obj_Teclados_DAL.sModelo_Teclado = txt_ModeloTeclado.Text.Trim();
@@ -97,9 +105,9 @@ namespace PL
             else
             {
                 MessageBox.Show("No tiene teclados para poder eliminar.",
-                                "Alerta",
+                                "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Warning);
             }
 
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
@@ -133,8 +141,14 @@ namespace PL
             {
                 MessageBox.Show("El campo 'Modelo Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
-            }   
-
+            }
+            else
+            {
+                MessageBox.Show("Teclado guardado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Teclados_DAL.iId_Teclado = Convert.ToInt32(txt_IdTeclado.Text.Trim());
             Obj_Teclados_DAL.sTipo_Teclado = txt_TipoTeclado.Text.Trim();
             Obj_Teclados_DAL.sMarca_Teclado = txt_MarcaTeclado.Text.Trim();

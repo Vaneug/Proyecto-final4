@@ -56,9 +56,9 @@ namespace PL
             else
             {
                 MessageBox.Show("No tiene equipos para poder eliminar.",
-                                "Alerta",
+                                "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Warning);
             }
 
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
@@ -75,6 +75,13 @@ namespace PL
             {
                 MessageBox.Show("El campo 'ID_Equipo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+            else
+            {
+                MessageBox.Show("Equipo modificad0.",
+                                "Access",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
             }
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
             Obj_Equipo_DAL.sEstado = ddlEstado.Text.Trim();
@@ -112,7 +119,13 @@ namespace PL
                 MessageBox.Show("El campo 'ID_Equipo' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
-
+            else
+            {
+                MessageBox.Show("Equipo guardado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Equipo_DAL.iId_Equipo = Convert.ToInt32(txt_IdEquipo.Text.Trim());
             Obj_Equipo_DAL.sEstado = ddlEstado.Text.Trim();
             Obj_Equipo_DAL.sTipoTorre = ddltipotorre.Text.Trim();

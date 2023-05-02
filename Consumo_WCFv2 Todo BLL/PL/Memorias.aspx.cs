@@ -50,10 +50,10 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("Memoria eliminada.",
-                                "Alerta",
+                MessageBox.Show("No tiene memorias para poder eliminar.",
+                                "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Warning);
             }
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
 
@@ -80,9 +80,9 @@ namespace PL
             else
             {
                 MessageBox.Show("Memoria modificada.",
-                                "Alerta",
+                                "Access",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Information);
             }
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());
             Obj_Memoria_DAL.sTipo_Memoria = txt_TipoMemoria.Text.Trim();
@@ -116,9 +116,9 @@ namespace PL
             else
             {
                 MessageBox.Show("Memoria guardada.",
-                                "Alerta",
+                                "success",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Information);
             }
 
             Obj_Memoria_DAL.iId_Memoria = Convert.ToInt32(txt_IdMemoria.Text.Trim());

@@ -56,10 +56,16 @@ namespace PL
         {
             if (string.IsNullOrEmpty(txt_IdTorre.Text))
             {
-
-                MessageBox.Show("Debe completar el campo de identificación para eliminar");
-
-                return;
+                MessageBox.Show("El campo 'ID_Teclado' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
+            }
+        
+            else
+            {
+                MessageBox.Show("No tiene torres para poder eliminar.",
+                                "alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
             }
             Obj_torres_DAL.iId_Torre = Convert.ToInt32(txt_IdTorre.Text.Trim());
 

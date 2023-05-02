@@ -48,10 +48,10 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("No tiene ratones para poder eliminar.",
-                                "Alerta",
+                MessageBox.Show("No tiene raton para poder eliminar.",
+                                "alerta",
                                 MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                                MessageBoxIcon.Warning);
             }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
 
@@ -86,6 +86,13 @@ namespace PL
                 MessageBox.Show("El campo 'Modelo Raton' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("Raton modificado.",
+                                "Access",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
             Obj_Raton_DAL.sTipo_Raton = txt_TipoRaton.Text.Trim();
 
@@ -127,6 +134,13 @@ namespace PL
                 MessageBox.Show("El campo 'Modelo Raton' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Opcional: detiene el procesamiento adicional del código si se encuentra un error
             }
+            else
+            {
+                MessageBox.Show("Raton guardado.",
+                                "success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
             Obj_Raton_DAL.iId_Raton = Convert.ToInt32(txt_IdRaton.Text.Trim());
             Obj_Raton_DAL.sTipo_Raton = txt_TipoRaton.Text.Trim();
 
